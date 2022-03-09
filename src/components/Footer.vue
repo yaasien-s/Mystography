@@ -1,0 +1,35 @@
+<template>
+    <footer>
+        <p>© 2022 MYS'TOGRAPHY ALL RIGHTS RESERVED</p>
+    </footer>
+</template>
+
+<script>
+    export default {
+
+    }
+</script>
+
+<style lang="scss" scoped>
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: -10;
+        background-image: url("@/assets/images/world-map.jpg");
+        background-position: bottom;
+        background-size: cover;
+
+        @media (max-width: 780px) {
+            background-image: none;
+        }
+
+        p {
+            text-align: center;
+            margin-inline: auto;
+        }
+    }
+</style>
