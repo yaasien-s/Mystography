@@ -11,7 +11,7 @@
 
             <button type="submit" class="my-4" @click="login">Sign in</button>
 
-            <p style="font-weight: 600;">Not a member? <a href="#register">Create an account</a></p>
+            <p>Not a member? <a href="#register" style="font-weight: 600;">Create an account</a></p>
         </form>
 
     </div>
@@ -55,7 +55,7 @@
 
 <style lang="scss" scoped>
     .login {
-        padding-top: 100px;
+        padding-top: 125px;
     }
 
     #login-form {
@@ -66,17 +66,19 @@
         padding: 50px;
 
 
+        @media (max-width: 1000px) {
+                width: 60%;
+        }
 
         label {
             text-align: initial;
             margin: 10px;
-            font-weight: 600;
             margin-left: 0;
         }
 
         input {
             border: none;
-            border-bottom: 1px solid #000;
+            border-bottom: 2px solid #000;
             background: transparent;
         }
     }
@@ -102,9 +104,4 @@
     }
 
 
-    @media (max-width: 1000px) {
-        #login-form {
-            width: fit-content;
-        }
-    }
 </style>

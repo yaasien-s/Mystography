@@ -10,55 +10,56 @@
     <input type="radio" id="page8cb" name="pages" />
     <input type="radio" id="page9cb" name="pages" />
     <input type="radio" id="page10cb" name="pages" />
+    <h1 class=" text-light">Welcome to MYS'Tography</h1>
     <!-- page 1 -->
     <page id="page1">
       <img src="@/assets/images/lion.jpg" alt="">
-      <label for="page2cb" title="Start"><b>Background</b></label>
+      <label for="page2cb" title="Start"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 2 -->
     <page id="page2">
       <img src="@/assets/images/camera.jpg" alt="">
-      <label for="page3cb" title="Next"><b>Background</b></label>
+      <label for="page3cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 3 -->
     <page id="page3">
       <img src="@/assets/images/book.jpg" alt="">
-      <label for="page4cb" title="Next"><b>Background</b></label>
+      <label for="page4cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 4 -->
     <page id="page4">
       <img src="@/assets/images/crystal-ball.jpg" alt="PUPPY">
-      <label for="page5cb" title="Next"><b>Background</b></label>
+      <label for="page5cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 5 -->
     <page id="page5">
       <img src="@/assets/images/blur.jpg" alt="">
-      <label for="page6cb" title="Next"><b>Background</b></label>
+      <label for="page6cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 6 -->
     <page id="page6">
       <img src="@/assets/images/nikon.jpg" alt="">
-      <label for="page7cb" title="Next"><b>Background</b></label>
+      <label for="page7cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- Page 7 -->
     <page id="page7">
       <img src="@/assets/images/studio.jpg" alt="">
-      <label for="page8cb" title="Next"><b>Background</b></label>
+      <label for="page8cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 8 -->
     <page id="page8">
       <img src="@/assets/images/ocean.jpg" alt="">
-      <label for="page9cb" title="Next"><b>Background</b></label>
+      <label for="page9cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 9 -->
     <page id="page9">
       <img src="@/assets/images/iceland.jpg" alt="">
-      <label for="page10cb" title="Next"><b>Background</b></label>
+      <label for="page10cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 10 -->
     <page id="page10">
       <img src="@/assets/images/sky.jpg" alt="">
-      <label for="page1cb" title="That's all folks!"><b>Background</b></label>
+      <label for="page1cb" title="That's all folks!"><b>Background</b> <i class="fa-solid fa-images"></i></label>
     </page>
   </carousel>
 </template>
@@ -71,15 +72,26 @@
   }
 </script>
 <style lang="scss" scoped>
-body {
-  background-image: none;
-}
+
   carousel {
     width: 100%;
     text-align: center;
-    font-family: Trebuchet MS;
     display: block;
     font-size: 2rem;
+
+    h1 {
+      position: absolute;
+      font-weight: 100;
+      left: 30px;
+      bottom: 40%;
+      z-index: 95;
+      font-size: 2.5em;
+      
+      @media (max-width: 780px) {
+        font-size: 50px;
+        left: 10px;
+      }
+    }
 
     input {
       display: none;
@@ -93,9 +105,6 @@ body {
       transition: transform 0.5s;
       transform: scale(0);
 
-      div {
-        padding: 3em;
-      }
 
       img {
         width: 100%;
@@ -105,21 +114,45 @@ body {
 
       label {
         cursor: pointer;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
         position: absolute;
         width: fit-content;
         margin-inline: auto;
         bottom: 2em;
-        left: 0;
-        right: 0;
+        // left: 2em;
+        right: 2em;
         transition: .8s ease all;
 
         &:hover {
-          background-color: rgba(255, 255, 255, 0.8);
-          color: #000;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: #fff;
           transition: .8s ease all;
+        }
+
+        @media (max-width: 780px) {
+          border-radius: 10px;
+          padding: 0 5px;
+        }
+
+        i {
+          color: #000;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+
+        b {
+          font-weight: 500;
+          color: #000;
+
+          &:hover {
+            color: #fff;
+          }
+            @media (max-width:780px) {
+              display: none;
+            }
         }
       }
     }

@@ -1,0 +1,14 @@
+
+* {
+    color: #fff;
+}
+
+@media (max-width: 780px) {
+    * {
+        color: #000;       
+    }
+}
+
+body {
+    background-color: #ccc8b1;
+}

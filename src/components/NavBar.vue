@@ -23,12 +23,15 @@
         <li>
           <router-link class="link" :to="{name: 'Contact'}">Contact</router-link>
         </li>
+        <li>
+          <router-link class="link" :to="{name: 'Login'}" @click="logout"><i class="fa-solid fa-right-from-bracket"></i></router-link>
+        </li>
       </ul>
       <div class="icon">
         <i @click="toggleMobileNav" v-show="mobile" class="fa fa-bars" :class="{'icon-active' : mobileNav}"></i>
       </div>
       <transition name="mobile-nav">
-        <ul v-show="mobileNav" class="dropdown-nav">
+        <ul v-show="mobileNav" class="dropdown-nav pt-4">
           <li>
             <router-link class="link" :to="{name: 'Home'}"><i class="fa fa-home"></i> Home</router-link>
           </li>
@@ -48,7 +51,7 @@
             <router-link class="link" :to="{name: 'Contact'}"><i class="fa-solid fa-envelope"></i> Contact</router-link>
           </li>
            <li>
-            <router-link class="link" id="logout" :to="{name: 'Login'}"><i class="fa-solid fa-right-from-bracket"></i></router-link>
+            <router-link class="link" id="logout" :to="{name: 'Login'}" @click="logout"><i class="fa-solid fa-right-from-bracket"></i></router-link>
           </li>
         </ul>
       </transition>
@@ -63,6 +66,9 @@
 
 <script>
   export default {
+    props() {
+      Loggedin
+    },
     name: "navigation",
     data() {
       return {
@@ -102,7 +108,11 @@
         this.mobile = false;
         this.mobileNav = false;
         return;
-      }
+      },
+
+    logout() {
+      localStorage.clear();
+    }
     }
   }
 </script>
@@ -115,6 +125,10 @@
     position: fixed;
     transition: .5s ease all;
     color: #fff;
+
+    .fa-bars:before, .fa-navicon:before {
+      color: #fff;
+    }
 
     nav {
       position: relative;
@@ -150,10 +164,11 @@
         padding-bottom: 4px;
         border-bottom: 1px solid transparent;
         text-decoration: none;
+        font-weight: 600;
 
         &:hover {
-          color: #42b983;
-          border-color: #42b983;
+          color: #858585;
+          border-color: #858585;
         }
       }
 
@@ -211,8 +226,14 @@
           margin-left: 0;
 
           .link {
-            color: #000;
+            color: #fff;
+
+            &:hover {
+              color: #000;
+              border-color: #000;
+            }
           }
+
         }
 
          #logout {
@@ -273,7 +294,13 @@
   }
 
   nav a.router-link-exact-active {
-    color: #42b983 !important;
-    border-color: #42b983;
+    color: #858585 !important;
+    border-color: #858585;
+
+    @media (max-width: 780px) {
+      color: #000 !important;
+      border-color: #000;
+    }
+
   }
 </style>

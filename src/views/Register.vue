@@ -17,7 +17,7 @@
 
             <button type="submit" class="my-4">Sign Up</button>
 
-            <p style="font-weight: 600;">Already a member? <a href="#login">Sign in</a></p>
+            <p>Already a member? <a href="#login" style="font-weight: 600;">Sign in</a></p>
         </form>
 
     </div>
@@ -66,7 +66,8 @@
 
 <style lang="scss" scoped>
     .register {
-        padding-top: 100px;
+        padding-top: 125px;
+        color: #fff;
     }
 
     form {
@@ -75,9 +76,13 @@
         margin-inline: auto;
         background: transparent;
 
+        @media (max-width: 1000px) {
+                width: 50%;
+        }
+
         input {
             border: none;
-            border-bottom: 1px solid #000;
+            border-bottom: 2px solid #000;
             background: transparent;
         }
 
@@ -85,7 +90,6 @@
         label {
             text-align: initial;
             margin: 10px;
-            font-weight: 600;
             margin-left: 0;
 
             span {
@@ -96,6 +100,7 @@
     }
 
     button {
+        color: #fff;
         border: none;
         height: 40px;
         transition: 1s ease all;
@@ -114,9 +119,4 @@
         }
     }
 
-    @media (max-width: 1000px) {
-        form {
-            width: fit-content;
-        }
-    }
 </style>
