@@ -33,22 +33,22 @@
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav pt-4">
           <li>
-            <router-link class="link" :to="{name: 'Home'}"><i class="fa fa-home"></i> Home</router-link>
+            <router-link class="link" :to="{name: 'Home'}">Home</router-link>
           </li>
           <li>
-            <router-link class="link" :to="{name: 'About'}"><i class="fa-solid fa-circle-info"></i> About Us</router-link>
+            <router-link class="link" :to="{name: 'About'}">About Us</router-link>
           </li>
           <li>
-            <router-link class="link" :to="{name: 'Explore'}"><i class="fa-solid fa-compass"></i> Explore</router-link>
+            <router-link class="link" :to="{name: 'Explore'}">Explore</router-link>
           </li>
           <li>
-            <router-link class="link" :to="{name: 'Register'}"><i class="fa-solid fa-address-card"></i> Register</router-link>
+            <router-link class="link" :to="{name: 'Register'}">Register</router-link>
           </li>
           <li>
-            <router-link class="link" :to="{name: 'Login'}"><i class="fa-solid fa-right-to-bracket"></i> Login</router-link>
+            <router-link class="link" :to="{name: 'Login'}">Login</router-link>
           </li>
           <li>
-            <router-link class="link" :to="{name: 'Contact'}"><i class="fa-solid fa-envelope"></i> Contact</router-link>
+            <router-link class="link" :to="{name: 'Contact'}">Contact</router-link>
           </li>
            <li>
             <router-link class="link" id="logout" :to="{name: 'Login'}" @click="logout"><i class="fa-solid fa-right-from-bracket"></i></router-link>
@@ -218,8 +218,8 @@
         // background-color: #fff;
         top: 0;
         left: 0;
-        background-image: url("@/assets/images/compass.jpg");
-        background-position: center;
+        background-image: url("@/assets/images/side-background.jpg");
+        background-position: right;
         background-size: cover;
 
         li {
@@ -238,8 +238,9 @@
 
          #logout {
           position: absolute;
-          bottom: 3em;
-          left: 3.5em;
+          bottom: 2em;
+          left: 2em;
+          font-size: 1.5em;
         }
       }
 

@@ -14,47 +14,47 @@
     <!-- page 1 -->
     <page id="page1">
       <img src="@/assets/images/lion.jpg" alt="">
-      <label for="page2cb" title="Start"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page2cb" title="Start"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 2 -->
     <page id="page2">
       <img src="@/assets/images/camera.jpg" alt="">
-      <label for="page3cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page3cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 3 -->
     <page id="page3">
       <img src="@/assets/images/book.jpg" alt="">
-      <label for="page4cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page4cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 4 -->
     <page id="page4">
       <img src="@/assets/images/crystal-ball.jpg" alt="PUPPY">
-      <label for="page5cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page5cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 5 -->
     <page id="page5">
       <img src="@/assets/images/blur.jpg" alt="">
-      <label for="page6cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page6cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 6 -->
     <page id="page6">
       <img src="@/assets/images/nikon.jpg" alt="">
-      <label for="page7cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page7cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- Page 7 -->
     <page id="page7">
-      <img src="@/assets/images/studio.jpg" alt="">
-      <label for="page8cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <img src="@/assets/images/jaguar.jpg" alt="">
+      <label for="page8cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 8 -->
     <page id="page8">
       <img src="@/assets/images/ocean.jpg" alt="">
-      <label for="page9cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page9cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 9 -->
     <page id="page9">
       <img src="@/assets/images/iceland.jpg" alt="">
-      <label for="page10cb" title="Next"><b>Background</b> <i class="fa-solid fa-images"></i></label>
+      <label for="page10cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
     </page>
     <!-- page 10 -->
     <page id="page10">
@@ -72,7 +72,7 @@
   }
 </script>
 <style lang="scss" scoped>
-
+$primarytext: red;
   carousel {
     width: 100%;
     text-align: center;
@@ -114,7 +114,7 @@
 
       label {
         cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.5);
         padding: 5px;
         position: absolute;
         width: fit-content;
@@ -125,7 +125,7 @@
         transition: .8s ease all;
 
         &:hover {
-          background-color: rgba(0, 0, 0, 0.8);
+          background-color: rgba(0, 0, 0, 0.5);
           color: #fff;
           transition: .8s ease all;
         }

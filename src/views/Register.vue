@@ -1,8 +1,8 @@
 <template>
     <div class="register" @submit.prevent="register">
-        <h1 class="text-center">Create An Account</h1>
 
         <form action="">
+        <h1 class="text-initial">Create An Account</h1>
             <label for="">Full Name <span>*</span></label>
             <input type="name" required v-model="fullname">
 
@@ -65,6 +65,15 @@
 </script>
 
 <style lang="scss" scoped>
+$textcolor: white;
+$mobilecolor: black;
+
+* {
+    // color: $textcolor;
+    @media (max-width: 780px) {
+        color: $mobilecolor;
+    }
+}
     .register {
         padding-top: 125px;
         color: #fff;
@@ -84,6 +93,10 @@
             border: none;
             border-bottom: 2px solid #000;
             background: transparent;
+
+            &:focus {
+                outline: none;
+            }
         }
 
 

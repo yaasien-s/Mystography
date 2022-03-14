@@ -1,13 +1,13 @@
 <template>
     <div class="login">
-        <h1 class="text-center">Login</h1>
 
         <form @submit.prevent="login" id="login-form">
+        <h1 class="text-initial">Login</h1>
             <label for="">Email</label>
-            <input type="email" name="" id="" v-model="email" required>
+            <input type="email" name="" id="" v-model="email" autocomplete="email" required>
 
             <label for="">Password</label>
-            <input type="password" name="" id="" v-model="password" required>
+            <input type="password" name="" id="" v-model="password" autocomplete="password" required>
 
             <button type="submit" class="my-4" @click="login">Sign in</button>
 
@@ -54,6 +54,9 @@
 </script>
 
 <style lang="scss" scoped>
+$textcolor: white;
+$mobilecolor: black;
+
     .login {
         padding-top: 125px;
     }
@@ -64,6 +67,11 @@
         margin-inline: auto;
         background: transparent;
         padding: 50px;
+        color: $textcolor;
+
+        @media (max-width: 780px) {
+            color: $mobilecolor;
+        }
 
 
         @media (max-width: 1000px) {
@@ -80,6 +88,10 @@
             border: none;
             border-bottom: 2px solid #000;
             background: transparent;
+
+            &:focus {
+                outline: none;
+            }
         }
     }
 

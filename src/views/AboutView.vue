@@ -1,9 +1,7 @@
 <template>
   <div class="about">
     <h1>About Us</h1>
-    <p>We at MYS'Tography, we as in royal we, loves interacting with poeple, animals, nature. Always believing that
-      evrything and everyone has their own type of beauty. I'd like to show the world how I see everything in it's
-      nartural state of beauty.</p>
+    <p></p>
       <br>
       <h1>Our Passion</h1>
   </div>
@@ -16,6 +14,11 @@
 </script>
 
 <style lang="scss" scoped>
+$textcolor: white;
+
+*{
+  color: $textcolor;
+}
   .about {
     padding-top: 125px;
     text-align: center;

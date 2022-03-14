@@ -1,7 +1,7 @@
 <template>
 <div class="contact">
-<h1 class="text-center">Contact</h1>
   <form  @submit.prevent="handleSubmit" autocomplete="on" action="POST">
+<h1 class="text-initial">Contact</h1>
       <label for="">Name</label>
       <input type="name" v-model="name" required>
       <label for="">Email</label>
@@ -56,6 +56,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+$textcolor: white;
+$mobilecolor: black;
+
 .contact {
     padding-top: 125px;
 }
@@ -63,9 +67,11 @@ form {
     display: grid;
     width: 35%;
     margin-inline: auto;
+     color: $textcolor;
 
     @media (max-width: 780px) {
         width: 50%;
+        color: $mobilecolor;
     }
 
 
@@ -78,6 +84,10 @@ form {
         background: transparent;
         border: none;
         border-bottom: 2px solid #000;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     textarea {
