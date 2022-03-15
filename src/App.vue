@@ -29,6 +29,7 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
+    z-index: -100;
 
     @media (max-width: 780px) {
       background-image: none;
