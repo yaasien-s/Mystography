@@ -6,11 +6,17 @@
             <label for="">Full Name <span>*</span></label>
             <input type="name" required v-model="fullname">
 
+            <div class="row">
+                <div class="col-sm-6">
             <label for="">Email <span>*</span></label>
-            <input type="email" required v-model="email">
+            <input class="w-100" type="email" required v-model="email">
+                </div>
 
+                <div class="col-sm-6">
             <label for="">Contact Number <span>*</span></label>
-            <input type="contact" required v-model="contact">
+            <input class="w-100" type="contact" required v-model="contact">
+                </div>
+            </div>
 
             <label for="">Password <span>*</span></label>
             <input type="password" required v-model="password">
@@ -77,6 +83,11 @@ $mobilecolor: black;
     .register {
         padding-top: 125px;
         color: #fff;
+
+        @media (max-width: 375px) {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
     }
 
     form {
@@ -87,6 +98,10 @@ $mobilecolor: black;
 
         @media (max-width: 1000px) {
                 width: 50%;
+        }
+
+        @media (max-width: 375px) {
+            width: 75%;
         }
 
         input {

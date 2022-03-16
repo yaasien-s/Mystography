@@ -18,6 +18,10 @@
         bottom: 0;
         width: 100%;
         z-index: -5;
+
+        @media (max-width: 1000px) {
+            padding-bottom: 0;
+        }
         // background-image: url("@/assets/images/world-map.jpg");
         // background-position: bottom;
         // background-size: cover;

@@ -2,7 +2,7 @@
     <div class="container">
         <h1>Explore</h1>
         <div class="row">
-            <div v-for="post of posts" :key="post.name" class="card col-sm-3">
+            <div v-for="post of posts" :key="post.name" class="card col-sm-4">
                 <img :src="post.img" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="card-text">{{post.fullname}}</p>
@@ -13,29 +13,14 @@
                 </div>
             </div>
         </div>
-        <Modal :modalActive="modalActive">
-            <div class="modal-content">
-                <h1>Header</h1>
-                <p>Message</p>
-            </div>
-</Modal>
+        <router-link :to="{name: 'CreatePost'}"><i class="far fa-plus"></i></router-link>
     </div>
 
 </template>
 
 <script>
-import Modal from '@/components/Modal.vue'
-import { ref } from 'vue';
     export default {
-        components: {
-            Modal,
-        },
-        setup() {
-            const modalActive = ref(true)
-
-            return { modalActive };
-        },
-        data() {
+         data() {
             return {
                 posts: null,
             };
@@ -101,6 +86,30 @@ h1{
         // column-count: 3;
         // column-gap: 20px;
 
+        i{
+            font-size: 4rem;
+            font-weight: 600px;
+            padding: 0 14px;
+            position: fixed;
+            right: 20px;
+            bottom: 75px;
+            color: #000;
+            border-radius: 50%;
+            background: rgba($color: #ccc8b1, $alpha: 1.0);
+            transition: .8s ease all;
+
+            &:hover {
+                color: rgb(0, 0, 0);
+                transition: .8s ease all;
+                transform: rotate(180deg);
+            }
+
+            @media (max-width: 375px) {
+                font-size: 3rem;
+                padding: 0 10px;
+            }
+        }
+
     }
 
     .card {
@@ -156,23 +165,11 @@ h1{
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         width: 85%;
-        height: 120%;
+        height: 120% !important;
         object-fit: cover;
         margin-inline: auto;
         display: block;
         // width: 100%;
 
-    }
-
-    #product-btn {
-        background-color: #9A6D38;
-        font-weight: 600;
-
-
-        &:hover {
-            background-color: #000;
-            color: #9A6D38;
-            font-weight: 600;
-        }
     }
 </style>

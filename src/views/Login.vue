@@ -59,6 +59,10 @@ $mobilecolor: black;
 
     .login {
         padding-top: 125px;
+
+        @media (max-width: 375px) {
+            padding-top: 100px;
+        }
     }
 
     #login-form {
@@ -66,7 +70,7 @@ $mobilecolor: black;
         width: 40%;
         margin-inline: auto;
         background: transparent;
-        padding: 50px;
+        // padding: 50px;
         color: $textcolor;
 
         @media (max-width: 780px) {
@@ -92,6 +96,10 @@ $mobilecolor: black;
             &:focus {
                 outline: none;
             }
+        }
+        
+                @media (max-width: 375px) {
+            width: 75%;
         }
     }
 
