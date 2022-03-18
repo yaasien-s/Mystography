@@ -2,19 +2,19 @@
     <div class="register" @submit.prevent="register">
 
         <form action="">
-        <h1 class="text-initial">Create An Account</h1>
+            <h1 class="text-initial">Create An Account</h1>
             <label for="">Full Name <span>*</span></label>
             <input type="name" required v-model="fullname">
 
             <div class="row">
                 <div class="col-sm-6">
-            <label for="">Email <span>*</span></label>
-            <input class="w-100" type="email" required v-model="email">
+                    <label for="">Email <span>*</span></label>
+                    <input class="w-100" type="email" required v-model="email">
                 </div>
 
                 <div class="col-sm-6">
-            <label for="">Contact Number <span>*</span></label>
-            <input class="w-100" type="contact" required v-model="contact">
+                    <label for="">Contact Number <span>*</span></label>
+                    <input class="w-100" type="contact" required v-model="contact">
                 </div>
             </div>
 
@@ -71,15 +71,17 @@
 </script>
 
 <style lang="scss" scoped>
-$textcolor: white;
-$mobilecolor: black;
+    $textcolor: white;
+    $mobilecolor: black;
 
-* {
-    // color: $textcolor;
-    @media (max-width: 780px) {
-        color: $mobilecolor;
+    * {
+
+        // color: $textcolor;
+        @media (max-width: 780px) {
+            color: $mobilecolor;
+        }
     }
-}
+
     .register {
         padding-top: 125px;
         color: #fff;
@@ -97,7 +99,7 @@ $mobilecolor: black;
         background: transparent;
 
         @media (max-width: 1000px) {
-                width: 50%;
+            width: 50%;
         }
 
         @media (max-width: 375px) {
@@ -133,18 +135,17 @@ $mobilecolor: black;
         height: 40px;
         transition: 1s ease all;
         font-weight: 600;
-        background-image: url("@/assets/images/world-map.jpg");
-        background-position: bottom;
+        background-image: url("@/assets/images/compass.jpg");
+        background-position: center;
         background-size: cover;
 
 
 
         &:hover {
-            background-image: url("@/assets/images/world-map.jpg");
-            background-position: top;
+            background-image: url("@/assets/images/sky.jpg");
+            background-position: center;
             background-size: cover;
             transition: 1s ease all;
         }
     }
-
 </style>

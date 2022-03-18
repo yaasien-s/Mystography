@@ -2,7 +2,7 @@
     <div class="login">
 
         <form @submit.prevent="login" id="login-form">
-        <h1 class="text-initial">Login</h1>
+            <h1 class="text-initial">Login</h1>
             <label for="">Email</label>
             <input type="email" name="" id="" v-model="email" autocomplete="email" required>
 
@@ -39,6 +39,7 @@
                     })
                     .then((response) => response.json())
                     .then((json) => {
+                        console.log(json)
                         localStorage.setItem("jwt", json.jwt);
                         alert("User logged in");
                         this.$router.push({
@@ -54,8 +55,8 @@
 </script>
 
 <style lang="scss" scoped>
-$textcolor: white;
-$mobilecolor: black;
+    $textcolor: white;
+    $mobilecolor: black;
 
     .login {
         padding-top: 125px;
@@ -79,7 +80,7 @@ $mobilecolor: black;
 
 
         @media (max-width: 1000px) {
-                width: 60%;
+            width: 50%;
         }
 
         label {
@@ -97,8 +98,8 @@ $mobilecolor: black;
                 outline: none;
             }
         }
-        
-                @media (max-width: 375px) {
+
+        @media (max-width: 375px) {
             width: 75%;
         }
     }
@@ -106,22 +107,20 @@ $mobilecolor: black;
 
     button {
         border: none;
-        height: 40px;
+        height: 50px;
         transition: 1s ease all;
         font-weight: 600;
-        background-image: url("@/assets/images/world-map.jpg");
-        background-position: bottom;
+        background-image: url("@/assets/images/compass.jpg");
+        background-position: center;
         background-size: cover;
 
 
 
         &:hover {
-            background-image: url("@/assets/images/world-map.jpg");
-            background-position: top;
+            background-image: url("@/assets/images/sky.jpg");
+            background-position: center;
             background-size: cover;
             transition: 1s ease all;
         }
     }
-
-
 </style>

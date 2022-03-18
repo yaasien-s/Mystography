@@ -1,196 +1,139 @@
 <template>
-  <carousel>
-    <input type="radio" id="page1cb" checked name="pages" />
-    <input type="radio" id="page2cb" name="pages" />
-    <input type="radio" id="page3cb" name="pages" />
-    <input type="radio" id="page4cb" name="pages" />
-    <input type="radio" id="page5cb" name="pages" />
-    <input type="radio" id="page6cb" name="pages" />
-    <input type="radio" id="page7cb" name="pages" />
-    <input type="radio" id="page8cb" name="pages" />
-    <input type="radio" id="page9cb" name="pages" />
-    <input type="radio" id="page10cb" name="pages" />
+  <div class="home">
+    <div id="landing">
+      <h1 class="text-light">Welcome <br> to <br> Myst</h1>
+      <router-link :to="{name: 'About'}"><button>Learn More</button></router-link>
+    </div>
+    <h1>What we do?</h1>
+    <br>
+    <p class="w-75">At MYS'T we want to show everyone the beauty of photography, showcase the different type
+      of styles in
+      photography. We are all about bringing people together through photography, no matter where in the world.
+      We want you to have direct communication with your favourite photographer, chat with them, speak about how they
+      inspire you to become a photographer yourself. If you feeling for a collab or
+      just to hire them for a shoot.
+    </p>
+    <br><br>
+<div class="row">
+  <div class="col-sm-3">
+    <img src="@/assets/images/camera.jpg" alt="">
+  </div>
+  <div class="col-sm-3">
+    <img src="@/assets/images/compass.jpg" alt="">
+  </div>
+  <div class="col-sm-3">
+    <img src="@/assets/images/lion.jpg" alt="">
+  </div>
+  <div class="col-sm-3">
+    <img src="@/assets/images/book.jpg" alt="">
+  </div>
+  <!-- <div class="col-sm-2">
+    <img src="@/assets/images/ocean.jpg" alt="">
+  </div> -->
+</div>
 
-    <!-- page 1 -->
-    <page id="page1">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/lion.jpg" alt="">
-      <label for="page2cb" title="Start"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 2 -->
-    <page id="page2">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/camera.jpg" alt="">
-      <label for="page3cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 3 -->
-    <page id="page3">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/book.jpg" alt="">
-      <label for="page4cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 4 -->
-    <page id="page4">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/crystal-ball.jpg" alt="PUPPY">
-      <label for="page5cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 5 -->
-    <page id="page5">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/blur.jpg" alt="">
-      <label for="page6cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 6 -->
-    <page id="page6">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/nikon.jpg" alt="">
-      <label for="page7cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- Page 7 -->
-    <page id="page7">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/jaguar.jpg" alt="">
-      <label for="page8cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 8 -->
-    <page id="page8">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/ocean.jpg" alt="">
-      <label for="page9cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 9 -->
-    <page id="page9">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/iceland.jpg" alt="">
-      <label for="page10cb" title="Next"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-    <!-- page 10 -->
-    <page id="page10">
-          <h1 class=" text-light">Welcome to MYS'Tography</h1>
-      <img src="@/assets/images/sky.jpg" alt="">
-      <label for="page1cb" title="That's all folks!"><b>Click Me</b> <i class="fa-solid fa-images"></i></label>
-    </page>
-  </carousel>
+<Contact/>
+  </div>
 </template>
 
 <script>
+import Contact from '../components/Contact.vue'
   // @ is an alias to /src
-
   export default {
+
+    components: {
+      Contact,
+    }
 
   }
 </script>
 <style lang="scss" scoped>
-$primarytext: red;
-  carousel {
-    width: 100%;
-    text-align: center;
-    display: block;
-    font-size: 2rem;
+  $primarytext: red;
+
+  .home {
+    padding-bottom: 100px;
 
     h1 {
-      position: absolute;
-      font-weight: 100;
-      left: 30px;
-      bottom: 40%;
-      z-index: 95;
-      font-size: 2.5em;
-      
+      text-align: center;
+      margin: 50px auto;
+    }
+
+    p {
+      margin-inline: auto;
+      text-align: center;
+
       @media (max-width: 780px) {
-        font-size: 50px;
-        left: 10px;
+        text-align: initial !important;
       }
     }
 
-    input {
-      display: none;
+    .row {
+      width: 95%;
+      margin-inline: auto;
+
+      .col-sm-3 {
+        
+        
+        img{
+          width: 100%;
+          height: 100%;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+          @media (max-width:575px) {
+            box-shadow: none;
+            
+          }
+      }
+    }
     }
 
-    page {
-      position: absolute;
-      // top: 4em;
-      left: 0;
-      width: 100%;
-      transition: transform 0.5s;
-      transform: scale(0);
+    #landing {
 
+      background-image: url('@/assets/images/nikon.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
 
-      img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-
-        @media (max-width: 375px) {
-          overflow: hidden;
-          height: 107.8vh;
-          width: 107.8vw;
-        }
-      }
-
-      label {
-        cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.5);
-        color: #000;
-        padding: 5px;
+      h1 {
         position: absolute;
-        width: fit-content;
-        margin-inline: auto;
-        bottom: 2em;
-        // left: 2em;
-        right: 2em;
-        transition: .8s ease all;
+        font-weight: 100;
+        left: .8em;
+        bottom: 20%;
+        z-index: 95;
+        font-size: 5.5em;
+        text-align: initial;
+        text-transform: uppercase;
 
         @media (max-width: 780px) {
-          right: 1em;
-          bottom: 1em;
+          font-size: 50px;
+          left: 20px;
         }
+      }
 
-          @media (max-width: 375px) {
-            right: 0;
-            bottom: .7em;
-          }
+      button {
+        position: absolute;
+        left: 4.5em;
+        bottom: 15%;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+        padding: 10px;
+        background: rgba($color: #ffffff, $alpha: .8);
+        transition: .5s ease all;
 
         &:hover {
-          background-color: rgba(0, 0, 0, 0.5);
-          color: #fff;
+          color: #ffffff;
+          background: rgba($color: #000000, $alpha: .8);
           transition: .8s ease all;
         }
 
         @media (max-width: 780px) {
-          border-radius: 10px;
-          padding: 0 5px;
-        }
-
-        i {
-          // color: #000;
-          display: none;
-
-          @media (max-width: 780px) {
-            display: grid;
-            padding: 5px 3px;
-          }
-
-          // &:hover {
-          //   color: #fff;
-          // }
-        }
-
-        b {
-          font-weight: 600;
-            @media (max-width:780px) {
-              display: none;
-            }
+          left: 20px;
         }
       }
-    }
 
-    @for $i from 1 through 10 {
-      #page#{$i}cb:checked~ {
-        #page#{$i} {
-          transform: scale(1);
-        }
-      }
+
     }
   }
 </style>
