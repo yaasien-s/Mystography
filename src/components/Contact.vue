@@ -148,7 +148,7 @@
                 border: none;
                 font-weight: 600;
                 background-image: url("@/assets/images/compass.jpg");
-                transition: 1.5s ease all;
+                transition: .8s ease all;
                 background-position: center;
                 background-size: cover;
 
@@ -157,7 +157,7 @@
                     background-image: url("@/assets/images/sky.jpg");
                     background-position: center;
                     background-size: cover;
-                    transition: 1.5s ease all;
+                    transition: .8s ease all;
                     color: #fff;
                 }
             }

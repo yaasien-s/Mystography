@@ -15,6 +15,9 @@
           <router-link class="link" :to="{name: 'Explore'}">Explore</router-link>
         </li>
         <li>
+          <router-link class="link" :to="{name: 'Profile'}">Profile</router-link>
+        </li>
+        <li>
           <router-link class="link" :to="{name: 'Register'}">Register</router-link>
         </li>
         <li>

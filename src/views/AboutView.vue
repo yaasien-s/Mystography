@@ -63,7 +63,9 @@
 
         img {
           width: 75%;
-          height: 90%;
+          height: 84.7%;
+          overflow: hidden;
+          object-position: top;
           object-fit: cover;
 
           @media (max-width: 575px) {

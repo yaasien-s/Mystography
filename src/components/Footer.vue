@@ -1,11 +1,11 @@
 <template>
     <footer>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
           <p><router-link :to="{name: 'About'}">About Us</router-link></p>
             </div>
-            <div class="col-sm-6">
-        <p>© 2022 MYS'TOGRAPHY ALL RIGHTS RESERVED</p>
+            <div class="col-sm-8">
+        <p>Copyright 2022 © MYS'TOGRAPHY</p>
             </div>
         </div>
     </footer>
@@ -21,7 +21,7 @@
     footer {
         background-color: rgba(0, 0, 0, 0.8);
         padding: 10px;
-        // position: fixed;
+        position: fixed;
         bottom: 0;
         width: 100%;
         // z-index: -5;
@@ -44,6 +44,10 @@
                 &:hover {
                     color: #ccc8b1;
                     transition: .3s ease all;
+                }
+
+                @media (max-width: 768px) {
+                    display: none;
                 }
             }
         }

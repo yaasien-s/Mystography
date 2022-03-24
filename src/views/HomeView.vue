@@ -72,7 +72,7 @@ import Contact from '../components/Contact.vue'
       margin-inline: auto;
 
       .col-sm-3 {
-        
+        padding: 0;
         
         img{
           width: 100%;
@@ -88,12 +88,15 @@ import Contact from '../components/Contact.vue'
     }
 
     #landing {
-
       background-image: url('@/assets/images/nikon.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       height: 100vh;
+      z-index: 100;
+      overflow: hidden;
+
 
       h1 {
         position: absolute;

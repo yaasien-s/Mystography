@@ -4,10 +4,10 @@
         <form @submit.prevent="login" id="login-form">
             <h1 class="text-initial">Login</h1>
             <label for="">Email</label>
-            <input type="email" name="" id="" v-model="email" autocomplete="email" required>
+            <input type="email" name="" id="" v-model="email" required>
 
             <label for="">Password</label>
-            <input type="password" name="" id="" v-model="password" autocomplete="password" required>
+            <input type="password" name="" id="" v-model="password" required>
 
             <button type="submit" class="my-4" @click="login">Sign in</button>
 
@@ -41,6 +41,11 @@
                     .then((json) => {
                         console.log(json)
                         localStorage.setItem("jwt", json.jwt);
+                         localStorage.setItem("name", json.user.fullname);
+                         localStorage.setItem("id", json.user._id)
+                         localStorage.setItem("email", json.user.email)
+                         localStorage.setItem("contact", json.user.contact)
+                        // console.log( localStorage.getItem("name"));
                         alert("User logged in");
                         this.$router.push({
                             name: "Explore"
@@ -60,6 +65,7 @@
 
     .login {
         padding-top: 125px;
+        // height: 91.4vh;
 
         @media (max-width: 375px) {
             padding-top: 100px;
@@ -108,7 +114,7 @@
     button {
         border: none;
         height: 50px;
-        transition: 1s ease all;
+        transition: .8s ease all;
         font-weight: 600;
         background-image: url("@/assets/images/compass.jpg");
         background-position: center;
@@ -120,7 +126,7 @@
             background-image: url("@/assets/images/sky.jpg");
             background-position: center;
             background-size: cover;
-            transition: 1s ease all;
+            transition: 8ss ease all;
         }
     }
 </style>

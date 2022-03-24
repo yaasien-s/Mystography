@@ -2,17 +2,14 @@
     <div class="container">
         <h1>Explore</h1>
         <div class="row">
-            <div v-for="post of posts" :key="post.id" class="card col-sm-4">
-                <router-link :to="{ name: 'Post' ,params: { id: post.id } }">
-                    <div class="card-body">
-                        <p class="card-text">{{post.fullname}}</p>
-                        <!-- <h6 style="font-weight: 600;" class="text-dark">{{post.description}}</h6> -->
-                        <!-- <h5 class="card-title" style="font-weight: 600;">{{product.title}}</h5> -->
-                        <!-- <p class="card-text text-dark" style="font-weight: 600;">R {{product.price}}</p> -->
-                        <!-- <a href="#" class="btn" id="product-btn">Add to cart</a> -->
-                    </div>
+            <div v-for="post of posts" :key="post.title" class="card col-sm-4">
                     <img :src="post.img" class="card-img-top" alt="...">
-                </router-link>
+                        <router-link :to="{name: 'Post', params: { id: post._id }}">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </router-link>
+                    <div class="card-body">
+                        <p class="card-text">{{post.title}}</p>
+                    </div>
             </div>
         </div>
         <router-link :to="{name: 'CreatePost'}"><i class="far fa-plus"></i></router-link>
@@ -75,12 +72,8 @@
     $mobilecolor: black;
 
     h1 {
-        color: $textcolor;
+        color: $mobilecolor;
         margin-bottom: -100px;
-
-        @media (max-width:780px) {
-            color: $mobilecolor;
-        }
     }
 
     .container {
@@ -89,14 +82,15 @@
         // column-count: 3;
         // column-gap: 20px;
 
-        i {
+        .fa-plus {
             font-size: 4rem;
             font-weight: 600px;
             padding: 0 14px;
             position: fixed;
             right: 20px;
-            bottom: 75px;
+            bottom: 100px;
             color: #000;
+            border: 1px solid #000;
             border-radius: 50%;
             background: rgba($color: #ccc8b1, $alpha: 1.0);
             transition: .8s ease all;
@@ -118,12 +112,12 @@
     .card {
         margin-inline: auto !important;
         margin-top: 125px;
-        padding-bottom: 75px;
+        // padding-bottom: 35px;
         // border-top-left-radius: 20px;
         // border-top-right-radius: 20px;
         background: transparent;
         border: none;
-        z-index: -10;
+        // z-index: -10;
         display: inline-block;
         // width: 100%;
 
@@ -131,6 +125,23 @@
             position: absolute;
             right: 40px;
             bottom: 0;
+        }
+        .fa-circle-info{
+            position: absolute;
+            font-size: 2em;
+            left: 60px;
+            top: 20px;
+            border: none;
+            background: none;
+            color: #ccc8b1;
+            transition: .5s ease all;
+
+            &:hover {
+                color: #fff;
+                transition: .5s ease all;
+                transform: scale(1.1) translateY(-5px);
+            }
+
         }
 
     }
@@ -143,8 +154,8 @@
         background: rgba($color: #000000, $alpha: 0.8);
         text-align: initial;
         margin-left: 10px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
 
 
 
@@ -156,19 +167,16 @@
         p {
             color: $textcolor;
 
-            @media (max-width: 780px) {
-                color: $mobilecolor;
-                font-weight: 600;
-            }
         }
+
     }
 
 
     .card-img-top {
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         width: 85%;
-        height: 120% !important;
+        height: 400px !important;
         object-fit: cover;
         margin-inline: auto;
         display: block;
