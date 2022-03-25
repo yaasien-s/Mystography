@@ -75,6 +75,7 @@
     $mobilecolor: black;
 
     * {
+        color: $mobilecolor;
 
         // color: $textcolor;
         @media (max-width: 780px) {

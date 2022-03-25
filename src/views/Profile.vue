@@ -31,7 +31,8 @@
             >
               Edit
             </button>
-            <button class="button-1" @click="deleteUser">Delete</button>
+            <button class="button-1" v-on:click="deleteUser(id)">Delete</button>
+        <button @click="back" id="Back">Go Back</button>
         </div>
       </div>
     </div>
@@ -112,6 +113,10 @@ export default {
       });
   },
   methods: {
+
+        back() {
+    this.$router.go(-1)
+        },
     updateUser() {
       if (!localStorage.getItem("jwt")) {
         alert("User not logged in");
@@ -138,12 +143,12 @@ export default {
           alert(err);
         });
     },
-    deleteUser() {
+    deleteUser(id) {
       if (!localStorage.getItem("jwt")) {
         alert("User not logged in");
         return this.$router.push({ name: "Login" });
       }
-      fetch("https://collab-backend-pos.herokuapp.com/users", {
+      fetch("https://collab-backend-pos.herokuapp.com/users/" + id, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -154,6 +159,7 @@ export default {
         .then((json) => {
           alert("DELETED USER");
           localStorage.clear();
+          this.$router.push({name:'Login'})
         })
         .catch((err) => {
           alert(err);

@@ -2,7 +2,7 @@
     <footer>
         <div class="row">
             <div class="col-sm-4">
-          <p><router-link :to="{name: 'About'}">About Us</router-link></p>
+          <p><router-link :to="{name: 'About'}">About MYST</router-link></p>
             </div>
             <div class="col-sm-8">
         <p>Copyright 2022 © MYS'TOGRAPHY</p>

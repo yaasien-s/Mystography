@@ -8,7 +8,7 @@
                             <i class="fa-solid fa-circle-info"></i>
                         </router-link>
                     <div class="card-body">
-                        <p class="card-text">{{post.title}}</p>
+                        <p class="card-text">{{post.created_by}}</p>
                     </div>
             </div>
         </div>
@@ -26,12 +26,10 @@
         },
         // fetching post
         created() {
-            if (localStorage.getItem("jwt")) {
                 fetch("https://collab-backend-pos.herokuapp.com/posts", {
                         method: "GET",
                         headers: {
                             "Content-type": "application/json; charset=UTF-8",
-                            Authorization: `Bearer ${localStorage.getItem("jwt")}`,
                         },
                     })
                     .then((response) => response.json())
@@ -56,14 +54,8 @@
                     .catch((err) => {
                         alert("Log in failed");
                     });
-            } else {
-                alert("Not logged in");
-                this.$router.push({
-                    name: "Login"
-                });
             }
 
-        },
     };
 </script>
 

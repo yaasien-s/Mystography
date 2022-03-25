@@ -23,13 +23,18 @@
           dozens of photographers including showcasing and live chats.</p>
       </div>
     </div>
+    <button @click="back" id="Back">Go Back</button>
     <!-- Carousel -->
   </div>
 </template>
 
 <script>
   export default {
-
+    methods: {
+       back() {
+    this.$router.go(-1)
+        },
+    }
   }
 </script>
 
@@ -39,7 +44,6 @@
 
   * {
     color: $mobilecolor;
-    z-index: -10 !important;
 
     @media (max-width: 780px) {
       color: $mobilecolor;
@@ -87,6 +91,30 @@
         text-align: initial;
       }
 
+    }
+
+    button {
+      position: fixed;
+      right: 30px;
+      bottom: 100px;
+       margin: 30px auto;
+            margin-bottom: 0;
+            width: 10%;
+            font-weight: 600;
+            padding: 5px;
+            border: none;
+            background: rgba($color: #ffffff, $alpha: .8);
+            transition: .5s ease all;
+
+            &:hover {
+                background: rgba($color: #000000, $alpha: .8);
+                transition: .5s ease all;
+                color: #ffffff;
+            }
+
+            @media (max-width: 768px) {
+                width: 35%;
+            }
     }
   }
 </style>

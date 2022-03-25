@@ -65,6 +65,7 @@
 
     .login {
         padding-top: 125px;
+        color: $mobilecolor;
         // height: 91.4vh;
 
         @media (max-width: 375px) {
@@ -78,7 +79,7 @@
         margin-inline: auto;
         background: transparent;
         // padding: 50px;
-        color: $textcolor;
+        // color: $textcolor;
 
         @media (max-width: 780px) {
             color: $mobilecolor;
@@ -119,6 +120,7 @@
         background-image: url("@/assets/images/compass.jpg");
         background-position: center;
         background-size: cover;
+        color: $textcolor;
 
 
 
